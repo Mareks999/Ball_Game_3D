@@ -16,3 +16,12 @@ mesh = SubResource("CapsuleMesh_p160d")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=692963033]
 shape = SubResource("ConvexPolygonShape3D_onrkg")
+
+[node name="TwistPivot" type="Node3D" parent="." unique_id=1815200446]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="PitchPivot" type="Node3D" parent="TwistPivot" unique_id=532577572]
+transform = Transform3D(1, 0, 0, 0, 0.9848077, 0.17364818, 0, -0.17364818, 0.9848077, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="TwistPivot/PitchPivot" unique_id=1825937845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
